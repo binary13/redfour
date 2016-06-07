@@ -1,3 +1,3 @@
 # redfour
 
-This repo is me working through the red4 Elixir tutorial from redfour.io.
+This repo is me working through the Red:4 Elixir tutorial from redfour.io.
