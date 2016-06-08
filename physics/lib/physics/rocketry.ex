@@ -18,6 +18,24 @@ defmodule Converter do
 	def round_down(val) when is_float(val), do: trunc(val)
 end
 
+defmodule ConverterTwo do
+	
+	def to_light_seconds({unit, val}, precision: precision) do
+		case unit do
+			:miles -> val * 5.36819e-6
+			:meters -> val * 3.335638620368e-9
+			:feet -> val * 1.016702651488166404e-9
+			:inches -> val * 8.472522095734715723e-11
+		end
+		|>round_to(precision)
+	end
+
+	def round_to(val, precision \\ 5) do
+		Float.round(val, precision)
+	end
+
+end
+
 defmodule Physics.Planet do
 
 	defstruct [
