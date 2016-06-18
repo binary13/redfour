@@ -1,8 +1,11 @@
 defmodule Converter do
 	
-  def meters_to_km(val) do
-		val / 1000
-	end
+  def meters_to_km(val), do: val / 1000
+
+	def km_to_meters(val), do: val * 1000
+
+	def seconds_to_hours(val), do: val / 3600
+
 
 	def to_nearest_tenth(val) do
 		Float.ceil val, 1
