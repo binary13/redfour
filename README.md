@@ -2,7 +2,7 @@
 
 This repo is me working through the Red:4 Elixir tutorial from redfour.io.
 
--- Chapter List --
+-- Chapter List --  
 01 - Welcome to Red:4                    0:00 - 1:50  
 02 - Letting Elixir Sink In              1:50 - 10:35  
 03 - Functional Programming Primer      10:35 - 22:08  
