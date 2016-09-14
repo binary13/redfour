@@ -1,6 +1,6 @@
 defmodule Converter do
 	
-  def meters_to_km(val), do: val / 1000
+  	def meters_to_km(val), do: val / 1000
 
 	def km_to_meters(val), do: val * 1000
 

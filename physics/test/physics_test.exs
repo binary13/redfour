@@ -2,13 +2,6 @@ defmodule PhysicsTest do
   use ExUnit.Case
   doctest Physics
 
-  test "escape velocity of planet x is correct: " do
-    ev = %{mass: 4.0e22, radius_m: 6.21e6}
-    |> Physics.Rocketry.escape_velocity
-    # |> IO.inspect
-    assert ev == 1.0
-  end
-  
   test "escape velocity of earth is correct: " do
   	ev = Physics.Rocketry.escape_velocity(:earth)
     # |> IO.inspect
@@ -32,6 +25,15 @@ defmodule PhysicsTest do
     assert ls == 0.00537
   end
 
+  test "Orbital radius for earth at 100km: " do
+    orb_radius = Physics.rocketry.orbital_radius(100)
+    assert orb_radius == 6470000
+  end
+
+  test "Orbital speed for earth at 100km: " do
+    orbital_spd = 
+  end
+  
   test "Orbital acceleration for earth at 100km: " do
     orbital_acc = Physics.Rocketry.orbital_acceleration(100)
     assert orbital_acc == 9.515619587729839

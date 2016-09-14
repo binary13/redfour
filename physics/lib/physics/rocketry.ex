@@ -5,7 +5,7 @@ defmodule Physics.Rocketry do
 	import Physics.Laws
 	import Planets
 
-	def escape_velocity(:earth), do: earth |> escape_velocity
+	def escape_velocity(:earth), do: earth  |> escape_velocity
 	def escape_velocity(:moon), do:	moon	|> escape_velocity
 	def escape_velocity(:mars), do:	mars	|> escape_velocity
 
@@ -40,7 +40,5 @@ defmodule Physics.Rocketry do
 	def orbital_radius(height) do
 		earth.radius_m + (height |> km_to_meters)
 	end
-
-	
 
 end
