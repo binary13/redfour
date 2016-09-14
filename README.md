@@ -9,7 +9,7 @@ This repo is me working through the Red:4 Elixir tutorial from redfour.io.
 04 - Setting Up a Project               22:08 - 25:37  
 05 - Calculate Escape Velocity          25:37 - 45:36  
 06 - Pattern Matching Basics            45:36 - 53:10  
-07 - Calculate Orbital Distance         53:10 - 1:14:40  
+->  07 - Calculate Orbital Distance         53:10 - 1:14:40  
 08 - Debugging                        1:04:40 - 1:16:04  
 09 - Solar Flare Project Setup        1:16:04 - 1:30:50  
 10 - List and Enumeration Basics      1:30:50 - 1:45:47  
