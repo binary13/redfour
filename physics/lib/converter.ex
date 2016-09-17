@@ -23,7 +23,8 @@ defmodule Converter do
 	defp from_feet(val), do: val * 1.016702651488166404e-9
 	defp from_inches(val), do: val * 8.472522095734715723e-11
 
-	def round_to(val, precision \\ 5), do: Float.round(val, precision)
+	def round_to(val, precision \\ 6) when is_float(val), do: Float.round(val, precision)
+	def round_to(val, _precision) when is_integer(val), do: round(val)
 	def to_nearest_tenth(val), do: Float.ceil val, 1
 	defp round_down(val) when is_float(val), do: trunc(val)
 

@@ -44,7 +44,7 @@ defmodule PhysicsTest do
 
   test "Orbital term for 6500km above earth: " do
     term = Physics.Rocketry.orbital_term(6500)
-    |> IO.inspect
+    # |> IO.inspect
     assert (term > 4) && (term < 5)
   end
 
