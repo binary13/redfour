@@ -23,6 +23,11 @@ defmodule Physics.Rocketry do
 		|> square_root
 	end
 
+	# Returns orbital radius in meters
+	def orbital_radius(height) do
+		earth.radius_m + (height |> km_to_meters)
+	end
+	
 	# Returns speed in meters per second
 	def orbital_speed(height) do
 		newtons_constant * earth.mass / orbital_radius(height)
@@ -40,11 +45,6 @@ defmodule Physics.Rocketry do
 			newtons_constant * earth.mass)
 			|> square_root
 			|> seconds_to_hours
-	end
-
-	# Returns orbital radius in meters
-	def orbital_radius(height) do
-		earth.radius_m + (height |> km_to_meters)
 	end
 
 	# Returns orbital height in km required to make one orbit in (time hours).
