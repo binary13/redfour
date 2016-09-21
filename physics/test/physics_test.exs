@@ -20,35 +20,35 @@ defmodule PhysicsTest do
     assert ev == 2.4
   end
 
-  test "Converting miles to to_light_seconds works: " do
+  test "converting miles to to_light_seconds works: " do
     ls = Converter.to_light_seconds({:miles, 1000}, precision: 5)
     assert ls == 0.00537
   end
 
-  test "Orbital radius for earth at 100km: " do
+  test "orbital radius for earth at 100km: " do
     orb_radius = Physics.Rocketry.orbital_radius(100)
     assert orb_radius == 6470000
   end
 
-  test "Orbital speed for earth at 100km: " do
+  test "orbital speed for earth at 100km: " do
     orb_spd = Physics.Rocketry.orbital_speed(100)
     |> Converter.round_to(6)
     assert orb_spd == 7846.404191
   end
   
-  test "Orbital acceleration for earth at 100km: " do
+  test "orbital acceleration for earth at 100km: " do
     orbital_acc = Physics.Rocketry.orbital_acceleration(100)
     |> Converter.round_to(9)
     assert orbital_acc == 9.515619588
   end
 
-  test "Orbital term for 6500km above earth: " do
+  test "orbital term for 6500km above earth: " do
     term = Physics.Rocketry.orbital_term(6500)
     # |> IO.inspect
     assert (term > 4) && (term < 5)
   end
 
-  test "Height for orbital term of 4 hours: " do
+  test "height for orbital term of 4 hours: " do
     height = Physics.Rocketry.orbital_height(4)
     |> IO.inspect
     |> Converter.round_to(4)

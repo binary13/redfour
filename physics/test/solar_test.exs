@@ -16,7 +16,12 @@ defmodule SolarTest do
     {:ok, data: flares}
   end
 
-  test "We have 8 solar flares: ", %{data: flares} do
+  test "we have 8 solar flares: ", %{data: flares} do
     assert length(flares) == 8
+  end
+
+  test "filter catches three fatal solar flares: ", %{data: flares} do
+    d = Solar.no_eva(flares)
+    assert length(d) == 3
   end
 end
