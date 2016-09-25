@@ -24,4 +24,10 @@ defmodule SolarTest do
     d = Solar.no_eva(flares)
     assert length(d) == 3
   end
+
+  test "deadliest function catches Carrington event (Power 99,000): ", %{data: flares} do
+    d = Solar.deadliest(flares)
+    |> IO.inspect
+    assert d == 99000
+  end
 end
